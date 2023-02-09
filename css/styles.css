@@ -304,10 +304,6 @@ img {
   background-color: var(--pressed-state);
 }
 
-.team-soc-icon {
-  fill: var(--light);
-}
-
 /* --------------- CUSTOMERS --------------- */
 
 .customers {
@@ -328,18 +324,16 @@ img {
   align-items: center;
   border: 1px solid var(--subtle-text);
   border-radius: 4px;
+  color: var(--subtle-text);
 }
 
 .customers-link:is(:hover, :focus) {
   border-color: var(--pressed-state);
+  color: var(--pressed-state);
 }
 
 .customers-icon {
-  fill: var(--subtle-text);
-}
-
-.customers-link:is(:hover, :focus) .customers-icon {
-  fill: var(--pressed-state);
+  fill: currentColor;
 }
 
 /* ---------------- FILTER ----------------- */
@@ -373,6 +367,10 @@ img {
   padding-bottom: 120px;
 }
 
+.project-text {
+  color: var(--text);
+}
+
 .list-project {
   margin-top: 72px;
   display: flex;
@@ -382,8 +380,13 @@ img {
 }
 
 .item-project {
-  cursor: pointer;
   width: calc((100% - 48px) / 3);
+}
+
+.project-link {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .project-content {
@@ -393,7 +396,7 @@ img {
   border-top: none;
 }
 
-.item-project:is(:hover, :focus) .project-content {
+.project-link:is(:hover, :focus) .project-content {
   border: 0.5px solid var(--light);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -455,8 +458,4 @@ img {
 
 .item-footer-link:is(:hover, :focus) {
   background-color: var(--success);
-}
-
-.footer-soc-icon {
-  fill: var(--light);
 }
